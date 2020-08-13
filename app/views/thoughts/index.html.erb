@@ -1,4 +1,15 @@
+<%= render "new"%>
+
+<h2>Recent Posts </h2>
 <% @thoughts.each do |thought| %>
-  By  <%= thought.author.fullname %>
- <%= thought.text%>
+<div class="post_card">
+<div class="avatar">
+<%= check_photo(thought.author) %>
+</div>
+<div>
+ <span class="bold"><%= thought.author.fullname %> </span>
+
+<p><%= thought.text%></p>
+</div>
+</div>
 <%end%>

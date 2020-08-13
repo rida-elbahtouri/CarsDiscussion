@@ -5,6 +5,7 @@ class ThoughtsController < ApplicationController
     end
     def index
         user=User.find(check_user)
+        @thought=Thought.new
         @thoughts= followedthought(user)
     end
     def new

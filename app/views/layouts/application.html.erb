@@ -3,6 +3,7 @@
   <head>
     <title>CarsDiscussion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,13 +16,31 @@
   <%= flash[:alert]%>
   <div class="grid">
   <div class="user">
+    <%= sidebaruser(session[:current_user]) %>
   </div>
+
+  <div class="nav">
+    <div class="navbar-up">
+    <div class="left">
+      <%= link_to image_tag("nav-logo.svg",:class => "nav-icon"), root_path %>
+  </div>
+  <div class="right">
+    <i class="fas fa-cog"></i>
+    <i class="fas fa-pen"></i>
+  </div>
+    </div>
+  </div>
+
     <div class="side-bar">
+     <%= link_to  "HOME", root_path %>
+     <%= link_to  "DISCOVER", users_path %>
     </div>
-     <div class="navbar">
-    </div>
-    <div>
+     
+    <div class="content">
     <%= yield %>
+    </div>
+    <div class="who-to-follow">
+    <h3>who to follow</h3>
     </div>
     </div>
   </body>
