@@ -1,5 +1,5 @@
 class ThoughtsController < ApplicationController
-    before_action :check_user
+    before_action :check_user!
     def show
         @thought = Thought.find(params[:id])
     end
@@ -33,4 +33,6 @@ class ThoughtsController < ApplicationController
         followeds = user.followers.pluck(:followed_id).push(check_user)
         thought = Thought.where(author_id: followeds).ordered_by_most_recent
     end
+
+    
 end

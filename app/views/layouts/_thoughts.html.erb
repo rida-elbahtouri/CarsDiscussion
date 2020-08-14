@@ -1,0 +1,13 @@
+
+<% @thoughts.each do |thought| %>
+<div class="post_card">
+<div class="avatar">
+<%= check_photo(thought.author) %>
+</div>
+<div>
+ <span class="bold"><%= thought.author.fullname %> </span>
+
+<p><%= thought.text%></p>
+</div>
+</div>
+<%end%>

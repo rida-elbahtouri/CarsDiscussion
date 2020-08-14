@@ -12,6 +12,9 @@ class User < ApplicationRecord
 
 
     def whotofollow
-        people = User.where.not(id: self.followers.pluck(:followed_id))
+        people = User.where.not(id: self.followers.pluck(:followed_id).push(self.id)).order(created_at: :desc)
+    end
+    def followedby
+        people = User.where(id: self.followeds.pluck(:follower_id)).order(created_at: :desc)
     end
 end

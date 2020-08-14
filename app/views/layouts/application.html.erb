@@ -14,34 +14,10 @@
   <body>
   <%= flash[:notice]%>
   <%= flash[:alert]%>
-  <div class="grid">
-  <div class="user">
-    <%= sidebaruser(session[:current_user]) %>
-  </div>
-
-  <div class="nav">
-    <div class="navbar-up">
-    <div class="left">
-      <%= link_to image_tag("nav-logo.svg",:class => "nav-icon"), root_path %>
-  </div>
-  <div class="right">
-    <i class="fas fa-cog"></i>
-    <i class="fas fa-pen"></i>
-  </div>
-    </div>
-  </div>
-
-    <div class="side-bar">
-     <%= link_to  "HOME", root_path %>
-     <%= link_to  "DISCOVER", users_path %>
-    </div>
-     
-    <div class="content">
+  <%= before_yield(session[:current_user]) %>
     <%= yield %>
-    </div>
-    <div class="who-to-follow">
-    <h3>who to follow</h3>
-    </div>
+       </div>
+
     </div>
   </body>
 </html>

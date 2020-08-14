@@ -1,15 +1,12 @@
-<%= render "new"%>
 
-<h2>Recent Posts </h2>
-<% @thoughts.each do |thought| %>
-<div class="post_card">
-<div class="avatar">
-<%= check_photo(thought.author) %>
-</div>
+
+
 <div>
- <span class="bold"><%= thought.author.fullname %> </span>
-
-<p><%= thought.text%></p>
+<%= render "new"%>
+<h2>Recent Posts </h2>
+<%= thoughts(@thoughts) %>
 </div>
-</div>
-<%end%>
+    <div class="who-to-follow">
+    <h3>who to follow</h3>
+    <%= whotofollow(session[:current_user]) %>
+    </div>

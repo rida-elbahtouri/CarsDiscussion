@@ -1,5 +1,5 @@
 class FollowingsController < ApplicationController
-    before_action :check_user
+    before_action :check_user!
 
     def whotofollow
         user=User.find(check_user)
