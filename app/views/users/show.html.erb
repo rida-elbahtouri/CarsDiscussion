@@ -29,21 +29,7 @@
 </div>
     <h4 class="gray text-left">Followed by</h4>
     <% @followedby.each do |follower| %>
-        <div class="followedby post_card">
-        <div class="mt-1">
-        <%= check_photo(follower)%>
-        </div>
-        <div class="ml-1">
-        <div class="w-50 d-inline-block">
-       <p class="bold m-0"> 
-       <%= link_to  follower.fullname, user_path(follower),class:"bold"  %></p>
-       <span class="gray m-0"> @<%= follower.username%></span>
-       </div>
-       <%= followingstate(follower,session[:current_user])%>
-        
-       
-        </div>
-        </div>
+        <%= usercard(follower)%>
     <%end%>
 
 </div>

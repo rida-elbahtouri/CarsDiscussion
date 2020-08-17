@@ -5,6 +5,7 @@
   </div>
      <%= link_to  "HOME", root_path %>
      <%= link_to  "PROFILE", user_path(session[:current_user]) %>
+     <%= link_to  "USERS", users_path(term:'')%>
     </div>
 
 
@@ -14,10 +15,7 @@
       <%= link_to image_tag("nav-logo.svg",:class => "nav-icon"), root_path %>
   </div>
   <div class="right">
-
-    <i class="fas fa-cog"></i>
-    <i class="fas fa-pen"></i>
-    <i> <%= link_to "Sign out", session_path(session[:current_user]),method: :delete %> </i>
+    <i> <%= link_to "", session_path(session[:current_user]),method: :delete,class:"signout fas fa-sign-out-alt",id:"signout" %> </i>
   </div>
   
     </div>

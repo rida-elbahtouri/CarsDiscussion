@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
     def index
-        @users=User.all
-    end
+        if params[:term]==''
+           @results = User.all 
+        else
+            @results = User.all.where("lower(username)  LIKE :search OR lower(fullname)  LIKE :search", search: params[:term] )
+        end
+        end
     def show
         @user=User.find(params[:id])
         @followedby=@user.followers
