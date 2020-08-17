@@ -28,7 +28,7 @@ RSpec.describe Thought, type: :model do
     end
 
     it 'is invalid when text length is greater than 1000' do
-      subject.text = 'A'*1001
+      subject.text = 'A' * 1001
       expect(subject).to_not be_valid
     end
   end

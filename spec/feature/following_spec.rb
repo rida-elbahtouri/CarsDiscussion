@@ -6,27 +6,26 @@ RSpec.describe 'followings_controller', type: :system do
     User.create(fullname: 'user1', username: 'user1')
     User.create(fullname: 'user2', username: 'user2')
   end
-describe "follow user" do
+  describe 'follow user' do
     it 'follow user in the home page' do
-        do_login('user1')
-        click_link('follow')
-        expect(page).to have_content 'you followed user2'
+      do_login('user1')
+      click_link('follow')
+      expect(page).to have_content 'you followed user2'
     end
     it 'follow user in the user page' do
-        do_login('user1')
-        click_link('user2')
-        click_link('follow_id')
-        expect(page).to have_content 'you followed user2'
+      do_login('user1')
+      click_link('user2')
+      click_link('follow_id')
+      expect(page).to have_content 'you followed user2'
     end
-end
-describe "unfollow user" do
-  it 'unfollow user' do
-    do_login('user1')
-    click_link('follow')
-    click_link('USERS')
-    click_link('unfollow_id')
-    expect(page).to have_content 'you unfollowed user2'
-end
-end
- 
+  end
+  describe 'unfollow user' do
+    it 'unfollow user' do
+      do_login('user1')
+      click_link('follow')
+      click_link('USERS')
+      click_link('unfollow_id')
+      expect(page).to have_content 'you unfollowed user2'
+    end
+  end
 end

@@ -25,7 +25,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'is invalid when fullname length is greater than 20' do
-      subject.fullname = 'A'*31
+      subject.fullname = 'A' * 31
       expect(subject).to_not be_valid
     end
   end
@@ -51,7 +51,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'is invalid when username length is greater than 20' do
-      subject.username = 'A'*21
+      subject.username = 'A' * 21
       expect(subject).to_not be_valid
     end
   end
