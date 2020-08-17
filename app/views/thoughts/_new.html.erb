@@ -1,0 +1,8 @@
+<div class="p-5 mx-auto  border rounded-lg border-info">
+<%= form_for @thought do |f| %>
+    <div class="textarea">
+    <%= f.text_area :text,class: "textarea" %><br>
+    </div>
+    <%= f.submit "Post",class:"btn btn-info" %>
+<% end %>
+</div>

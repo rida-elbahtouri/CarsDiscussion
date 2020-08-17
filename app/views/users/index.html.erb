@@ -1,0 +1,11 @@
+<div class="searchbar">
+<%= form_tag('/users',method: :get) do %>
+  <%= text_field_tag(:term,nil, placeholder: 'Enter user name here', class: "mysearch") %>
+  <%= submit_tag("search" ,class:"btn btn-sm my-2 btn-info") %>
+<% end %>
+<div class="searchresult">
+<% @results.each do |user| %>
+<%= usercard(user)%>
+<%end%>
+</div>
+</div>
