@@ -34,6 +34,6 @@ class ThoughtsController < ApplicationController
 
   def followedthought(user)
     followeds = user.followeds.pluck(:id).push(check_user)
-    Thought.where(author_id: followeds).ordered_by_most_recent
+    Thought.where(author_id: followeds).ordered_by_most_recent.includes(:author)
   end
 end

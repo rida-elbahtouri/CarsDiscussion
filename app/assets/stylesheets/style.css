@@ -44,6 +44,21 @@ body {
   height: 50px;
 }
 
+.noti {
+  margin: 0;
+  padding: 4px 10px;
+}
+
+.notice {
+  color: green;
+  background-color: rgb(171, 236, 171);
+}
+
+.alert {
+  color: red;
+  background-color: rgb(243, 128, 128);
+}
+
 .img-none {
   width: 60px;
   height: 60px;
@@ -68,6 +83,15 @@ body {
 
 .bold {
   font-weight: bold;
+}
+
+.recent_posts,
+.who-to-follow {
+  padding: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 0.1px solid rgb(204, 181, 181);
+  background-color: white;
 }
 
 .img {
