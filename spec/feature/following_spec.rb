@@ -19,6 +19,14 @@ describe "follow user" do
         expect(page).to have_content 'you followed user2'
     end
 end
-
+describe "unfollow user" do
+  it 'unfollow user' do
+    do_login('user1')
+    click_link('follow')
+    click_link('USERS')
+    click_link('unfollow_id')
+    expect(page).to have_content 'you unfollowed user2'
+end
+end
  
 end

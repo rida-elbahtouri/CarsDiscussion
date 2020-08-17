@@ -21,10 +21,19 @@ describe "signup/in user" do
     end
     it 'sign out' do
         do_login('user')
-        click_link('Sign out')
+        click_link('signout')
         expect(page).to have_content 'user signout successfully'
     end
 end
 
+describe "searching" do
+    it "search for users" do
+        do_login('user')
+    visit users_path
+    fill_in('term', with: 'user')
+    click_button('search')
+    expect(page).to have_content 'user'
+    end
+end
  
 end

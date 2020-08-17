@@ -37,7 +37,7 @@ module ApplicationHelper
         if  user.followeds.exclude?(follower) and follower.id !=id
             link_to "",followings_path(user_id:follower.id), method: :post,class:"fas fa-plus middle follostate myplus",id: 'follow_id'
         elsif user.followeds.include?(follower) and follower.id !=id
-            link_to "",following_path(user_id:follower.id), method: :delete,class:"far fa-times-circle middle follostate myunfollow",id: 'unfollow_id'
+            link_to "",following_path(id:follower.id), method: :delete,class:"far fa-times-circle middle follostate myunfollow",id: 'unfollow_id'
         end
     end
 
