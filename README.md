@@ -1,4 +1,3 @@
-https://www.loom.com/share/f8c1f0cd8a39454ebd77554abcea635c
 
 # Car Discussion
 
@@ -9,7 +8,8 @@ https://www.loom.com/share/f8c1f0cd8a39454ebd77554abcea635c
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
 
-
+## Live vesion
+[click here](https://shrouded-plains-90260.herokuapp.com/)
 ## Screenshot
 ![screenshot1](app/assets/images/Screenshot.png)
 
@@ -106,7 +106,7 @@ if you still have a problem with webdriver try add gem 'webdrivers' to The Gemfi
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the <a href="https://github.comrida-elbahtouri/ThoughtSpace//issues" target="_blank">issues page</a>.
+Feel free to check the <a href="https://github.com/rida-elbahtouri/ThoughtSpace/issues" target="_blank">issues page</a>.
 
 ## Show your support
 
