@@ -35,7 +35,7 @@ module ApplicationHelper
     def followingstate(follower,id)
         user=User.find(id)
         if  user.followeds.exclude?(follower) and follower.id !=id
-            link_to "",followings_path(user_id:follower.id), method: :post,class:"fas fa-plus middle myplus"
+            link_to "",followings_path(user_id:follower.id), method: :post,class:"fas fa-plus middle myplus",id: 'follow_id'
         end
     end
 end
