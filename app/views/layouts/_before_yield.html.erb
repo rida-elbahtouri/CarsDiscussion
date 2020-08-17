@@ -4,7 +4,7 @@
     <%= sidebaruser(session[:current_user]) %>
   </div>
      <%= link_to  "HOME", root_path %>
-     <%= link_to  "DISCOVER", users_path %>
+     <%= link_to  "PROFILE", user_path(session[:current_user]) %>
     </div>
 
 

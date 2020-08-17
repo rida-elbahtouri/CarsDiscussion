@@ -1,12 +1,6 @@
 class FollowingsController < ApplicationController
     before_action :check_user!
-
-    def whotofollow
-        user=User.find(check_user)
-        @users=user.whotofollow
-    end
-
-    def follow
+    def create
         @followings = Following.new(follower_id:check_user,followed_id:params[:user_id])
         if @followings.save
             redirect_to root_path

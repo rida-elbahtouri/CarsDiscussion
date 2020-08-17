@@ -4,7 +4,7 @@
     <%= link_to  user.fullname, user_path(user),class:"bold"  %>
     </div>
     <div>
-    <%= link_to "follow", follow_path(user_id:user.id),class:"btn btn-small btn-info" %>
+    <%= link_to "follow",followings_path(user_id:user.id), method: :post,class:"btn btn-small btn-info" %>
     </div>
     </div>
 <%end%>

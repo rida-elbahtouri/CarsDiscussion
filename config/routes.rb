@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   root to:"thoughts#index"
   resources :thoughts
-  get '/whotofollow', to: 'followings#whotofollow'
-  get '/follow', to: 'followings#follow',as: "follow"
+
+  resources :followings,only: [:new, :create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
 end

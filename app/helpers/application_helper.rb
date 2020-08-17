@@ -3,7 +3,7 @@ module ApplicationHelper
         if user.photo.attached?
             image_tag(user.photo,:class => "img")
         else
-            content_tag(:div, "No photo", class: ["img-none", "bg_gray","circle","mx-auto"])
+            content_tag(:div, "No photo", class: ["bg_gray","circle","img-none"])
         end
     end
     def check_cover(user)
@@ -27,11 +27,6 @@ module ApplicationHelper
             render "/layouts/before_yield"
         end
     end
-    def after_yield(id)
-        if id
-            render "/layouts/after_yield"
-        end
-    end
     def thoughts(thoughts)
         @thoughts=thoughts
         render "/layouts/thoughts"
@@ -39,8 +34,8 @@ module ApplicationHelper
     
     def followingstate(follower,id)
         user=User.find(id)
-        if  follower.followedby.exclude?(user) and follower.id !=id
-            link_to  "", follow_path(user_id:follower.id) ,class:"fas fa-plus myplus"
+        if  user.followeds.exclude?(follower) and follower.id !=id
+            link_to "",followings_path(user_id:follower.id), method: :post,class:"fas fa-plus middle myplus"
         end
     end
 end

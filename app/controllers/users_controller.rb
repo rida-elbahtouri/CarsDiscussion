@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     end
     def show
         @user=User.find(params[:id])
-        @followedby=@user.followedby
+        @followedby=@user.followers
     end
     def new
         @user=User.new

@@ -15,11 +15,11 @@
 <p>@<%= @user.username%></p>
 <div class="user-static pt-2">
     <div class="text-center">
-        <p class="bold"><%= @user.followers.count %><p>
+        <p class="bold"><%= @user.followeds.count %><p>
         <p>Following</p>
     </div>
     <div class="text-center">
-        <p class="bold"><%= @user.followeds.count %><p>
+        <p class="bold"><%= @user.followers.count %><p>
         <p>Followers</p>
     </div>
     <div class="text-center">
@@ -35,7 +35,8 @@
         </div>
         <div class="ml-1">
         <div class="w-50 d-inline-block">
-       <p class="bold m-0"> <%= follower.fullname%></p>
+       <p class="bold m-0"> 
+       <%= link_to  follower.fullname, user_path(follower),class:"bold"  %></p>
        <span class="gray m-0"> @<%= follower.username%></span>
        </div>
        <%= followingstate(follower,session[:current_user])%>

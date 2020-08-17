@@ -5,8 +5,7 @@
 <%= check_photo(thought.author) %>
 </div>
 <div>
- <span class="bold"><%= thought.author.fullname %> </span>
-
+ <%= link_to  thought.author.fullname, user_path(thought.author),class:"bold"  %>
 <p><%= thought.text%></p>
 </div>
 </div>

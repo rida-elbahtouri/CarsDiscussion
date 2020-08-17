@@ -30,7 +30,7 @@ class ThoughtsController < ApplicationController
     end
 
     def followedthought(user)
-        followeds = user.followers.pluck(:followed_id).push(check_user)
+        followeds = user.followeds.pluck(:id).push(check_user)
         thought = Thought.where(author_id: followeds).ordered_by_most_recent
     end
 
