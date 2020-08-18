@@ -7,7 +7,7 @@ class ThoughtsController < ApplicationController
   def index
     user = User.find(check_user)
     @thought = Thought.new
-    @thoughts = followedthought(user)
+    @thoughts = user.followedthought
   end
 
   def new
@@ -30,10 +30,5 @@ class ThoughtsController < ApplicationController
 
   def thoughts_params
     params.require(:thought).permit(:text)
-  end
-
-  def followedthought(user)
-    followeds = user.followeds.pluck(:id).push(check_user)
-    Thought.where(author_id: followeds).ordered_by_most_recent.includes(:author)
   end
 end

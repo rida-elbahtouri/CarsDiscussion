@@ -16,4 +16,9 @@ class User < ApplicationRecord
   def whotofollow
     User.where.not(id: followeds.pluck(:id).push(id)).order(created_at: :desc)
   end
+
+  def followedthought
+    followeds = self.followeds.pluck(:id).push(id)
+    Thought.where(author_id: followeds).ordered_by_most_recent.includes(:author)
+  end
 end
