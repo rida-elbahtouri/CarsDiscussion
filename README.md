@@ -2,6 +2,17 @@
 # Car Discussion
 
 > This repo includes a social media app that will allow the user to signin and signup,follow friends , share his thought with them.
+> and  It allow user to search for other users by there full name or username.  
+## Project features
+
+- Create an account
+- Add a profile and cover image
+- Follow users
+- Unfollow users
+- Publish posts
+- Read others posts
+- Search for users
+ 
 
 ## Built With
 
@@ -17,6 +28,7 @@
 
 ![screenshot3](app/assets/images/Screenshot3.png)
 
+![screenshot4](app/assets/images/Screenshot4.png)
 ## Video
 - [presentation of the project](https://www.loom.com/share/78f482a44ed744c599e7c3a891bea0e7)
 ## Getting Started
