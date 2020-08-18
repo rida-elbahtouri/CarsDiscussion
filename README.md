@@ -30,7 +30,7 @@
 
 ![screenshot4](app/assets/images/Screenshot4.png)
 ## Video
-- [presentation of the project](https://www.loom.com/share/78f482a44ed744c599e7c3a891bea0e7)
+- [presentation of the project](https://www.loom.com/share/ce839dbeb08e4f169047fc058b870db7)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
