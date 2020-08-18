@@ -1,3 +1,4 @@
+
 # Car Discussion
 
 > This repo includes a social media app that will allow the user to signin and signup,follow friends , share his thought with them.
@@ -18,7 +19,8 @@
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
 
-
+## Live vesion
+[click here](https://shrouded-plains-90260.herokuapp.com/)
 ## Screenshot
 ![screenshot1](app/assets/images/Screenshot.png)
 
@@ -116,7 +118,7 @@ if you still have a problem with webdriver try add gem 'webdrivers' to The Gemfi
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the <a href="https://github.comrida-elbahtouri/ThoughtSpace//issues" target="_blank">issues page</a>.
+Feel free to check the <a href="https://github.com/rida-elbahtouri/ThoughtSpace/issues" target="_blank">issues page</a>.
 
 ## Show your support
 
