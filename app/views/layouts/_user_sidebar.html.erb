@@ -1,6 +1,8 @@
 <div class="user_avatar">
-    <%=check_photo(@user)%>
-   <span class="middle"> <%= @user.fullname.upcase  %> </span>
+
+  <%= link_to check_photo(@user) ,user_path(@user),class:"user_imglink" %>
+
+   <span class="middle"> <%= link_to @user.fullname.upcase ,user_path(@user),class:"user_imglink" %> </span>
 </div>
 
 <div class="user_followers text-center">
