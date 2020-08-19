@@ -1,0 +1,15 @@
+<div class="user_avatar">
+
+  <%= link_to check_photo(@user) ,user_path(@user),class:"user_imglink" %>
+
+   <span class="middle"> <%= link_to @user.fullname.upcase ,user_path(@user),class:"user_imglink" %> </span>
+</div>
+
+<div class="user_followers text-center">
+    <p class="bold white"><%= @user.followeds.count %><p>
+    <p>Following</p>
+</div>
+<div class="user_followeds text-center">
+    <p class="bold white"><%= @user.followers.count %><p>
+    <p>Followers</p>
+</div>

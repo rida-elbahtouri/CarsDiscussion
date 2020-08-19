@@ -1,0 +1,35 @@
+<div class="bg-white">
+<%= check_cover(@user)%>
+<div class="ml-2 p-1">
+<h3>Posts</h3>
+<%= thoughts(@user.thoughts) %>
+</div>
+</div>
+
+<div class="bg-white user-details pt-2">
+<div class="user_phto">
+<%= check_photo(@user)%>
+<%= followingstate(@user,session[:current_user])%>
+</div>
+ <p class="bold m-0"> <%= @user.fullname%></p>
+<p>@<%= @user.username%></p>
+<div class="user-static pt-2">
+    <div class="text-center">
+        <p class="bold"><%= @user.followeds.count %><p>
+        <p>Following</p>
+    </div>
+    <div class="text-center">
+        <p class="bold"><%= @user.followers.count %><p>
+        <p>Followers</p>
+    </div>
+    <div class="text-center">
+        <p class="bold"><%= @user.thoughts.count %><p>
+        <p>Thoughts</p>
+    </div>
+</div>
+    <h4 class="gray underline text-left">Followed by</h4>
+    <% @followedby.each do |follower| %>
+        <%= usercard(follower)%>
+    <%end%>
+
+</div>

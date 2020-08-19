@@ -1,0 +1,14 @@
+
+
+
+<div class="newthought">
+<%= render "new"%>
+<div class="recent_posts p-1 mx-2  mt-2">
+<h2>Recent Posts </h2>
+<%= thoughts(@thoughts) %>
+</div>
+</div>
+    <div class="who-to-follow">
+    <h3>who to follow</h3>
+    <%= whotofollow(session[:current_user]) %>
+    </div>
