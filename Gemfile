@@ -6,6 +6,9 @@ ruby '2.7.0'
 gem 'hirb'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
+
+gem 'devise', '~> 4.8'
+gem 'mimemagic', '~> 0.3.10'
 # Use pg as the database for Active Record
 gem 'pg', '~> 1.2', '>= 1.2.3'
 # Use Puma as the app server
