@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  has_many :photos
+  has_one :photo
   
   has_many :thoughts, foreign_key: 'author_id'
 
